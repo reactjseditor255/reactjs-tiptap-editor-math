@@ -1,0 +1,138 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  padding: 40px;
+
+  --white: #fff;
+  --black: #2e2b29;
+  --black-contrast: #110f0e;
+  --gray-1: rgba(61, 37, 20, 0.05);
+  --gray-2: rgba(61, 37, 20, 0.08);
+  --gray-3: rgba(61, 37, 20, 0.12);
+  --gray-4: rgba(53, 38, 28, 0.3);
+  --gray-5: rgba(28, 25, 23, 0.6);
+  --green: #22c55e;
+  --purple: #6a00f5;
+  --purple-contrast: #5800cc;
+  --purple-light: rgba(88, 5, 255, 0.05);
+  --yellow-contrast: #facc15;
+  --yellow: rgba(250, 204, 21, 0.4);
+  --yellow-light: #fffae5;
+  --red: #ff5c33;
+  --red-light: #ffebe5;
+  --shadow: 0px 12px 33px 0px rgba(0, 0, 0, 0.06), 0px 3.618px 9.949px 0px rgba(0, 0, 0, 0.04);
+}
+
+h2 {
+  margin: 0 0 20px;
+  font-size: 52px;
+}
+
+section {
+  margin: 0 0 20px;
+
+  > .control-group {
+    margin: 0 0 10px;
+  }
+
+  .control-group + div {
+    border: 1px solid #ccc;
+  }
+
+  .ProseMirror {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    min-height: 200px;
+  }
+}
+
+.tiptap code {
+  background-color: var(--purple-light);
+  border-radius: 0.4rem;
+  color: var(--black);
+  font-size: 0.85rem;
+  padding: 0.25em 0.3em;
+}
+
+.tiptap pre {
+  background: var(--black);
+  border-radius: 0.5rem;
+  color: var(--white);
+  font-family: JetBrainsMono, monospace;
+  margin: 1.5rem 0;
+  padding: 0.75rem 1rem;
+}
+
+.tiptap pre code {
+  background: none;
+  color: inherit;
+  font-size: 0.8rem;
+  padding: 0;
+}
+
+/* Code and preformatted text styles */
+code {
+  background-color: var(--purple-light);
+  border-radius: 0.4rem;
+  color: var(--black);
+  font-size: 0.85rem;
+  padding: 0.25em 0.3em;
+}
+
+pre {
+  background: var(--black);
+  border-radius: 0.5rem;
+  color: var(--white);
+  font-family: 'JetBrainsMono', monospace;
+  margin: 1.5rem 0;
+  padding: 0.75rem 1rem;
+
+  code {
+    background: none;
+    color: inherit;
+    font-size: 0.8rem;
+    padding: 0;
+  }
+}
+
+blockquote {
+  border-left: 3px solid var(--gray-3);
+  margin: 1.5rem 0;
+  padding-left: 1rem;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--gray-2);
+  margin: 2rem 0;
+}
+
+// Mathematics extension styles
+.Tiptap-mathematics-editor {
+  background: #202020;
+  color: #fff;
+  font-family: monospace;
+  padding: 0.2rem 0.5rem;
+}
+
+.Tiptap-mathematics-render {
+  padding: 0 0.25rem;
+
+  &--editable {
+    cursor: pointer;
+    transition: background 0.2s;
+
+    &:hover {
+      background: #eee;
+    }
+  }
+}
+
+.Tiptap-mathematics-editor,
+.Tiptap-mathematics-render {
+  border-radius: 0.25rem;
+  display: inline-block;
+}
